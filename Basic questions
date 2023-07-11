@@ -1,0 +1,119 @@
+#### Check if a number is positive or negative
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	if(n>0){
+	    cout<<"Positive number";
+	}
+	else if(n<0){
+	    cout<<"Negative number";
+	}
+	else{
+	    cout<<"Zero";
+	}
+	return 0;
+}
+
+
+#### Check whether a number is even or odd
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	if(n%2==0){
+	    cout<<"Even number";
+	}
+	else{
+	    cout<<"Odd number";
+	}
+	return 0;
+}
+
+
+
+#### Find the sum of first n natural numbers
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	int sum=0;
+	while(n){
+	    sum+=n;
+	    n--;
+	}
+	cout<<"Sum:"<<sum;
+	return 0;
+}
+
+
+
+#### Greatest of three numbers
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a,b,c;
+	cin>>a>>b>>c;
+	if(a>=b && a>=c){
+	    cout<<a<<" is the greatest";
+	}
+	else if(b>=c && b>=a){
+	    cout<<b<<" is the greatest";
+	}
+	else{
+	    cout<<c<<" is the greatest";
+	}
+	return 0;
+}
+
+
+#### Leap year or not
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	if(n%400==0){
+	    cout<<n<<" is leap year";
+	}
+	else if(n%4==0 && n%100!=0){
+	    cout<<n<<" is leap year";
+	}
+	else{
+	    cout<<n<<" is non leap year";
+	}
+	return 0;
+}
+
+
+ 
+#### Check whether a number is prime number or not
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	bool flag=true;
+	for(int i=2;i<n;i++){
+	    if(n%i==0){
+	        flag=false;
+          break;
+	    }
+	}
+	if(flag){
+	    cout<<"Prime number";
+	}
+	else{
+	    cout<<"Not a prime number";
+	}
+	return 0;
+}
