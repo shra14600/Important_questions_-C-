@@ -1,119 +1,245 @@
 #### Check if a number is positive or negative
-#include <iostream>
-using namespace std;
-
-int main() {
-	int n;
-	cin>>n;
-	if(n>0){
-	    cout<<"Positive number";
+import java.io.*;
+import java.util.Scanner;
+class Code {
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		if(n>0){
+		    System.out.println("Positive number");
+		}
+		else if(n<0){
+		    System.out.println("Negative number");
+		}
+		else{
+		    System.out.println("Zero");
+		}
 	}
-	else if(n<0){
-	    cout<<"Negative number";
-	}
-	else{
-	    cout<<"Zero";
-	}
-	return 0;
 }
 
 
 #### Check whether a number is even or odd
-#include <iostream>
-using namespace std;
-
-int main() {
-	int n;
-	cin>>n;
-	if(n%2==0){
-	    cout<<"Even number";
-	}
-	else{
-	    cout<<"Odd number";
-	}
-	return 0;
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if(a%2==0){
+            System.out.println("Even number");
+        }
+        else{
+            System.out.println("Odd number");
+        }
+    }
 }
 
 
-
 #### Find the sum of first n natural numbers
-#include <iostream>
-using namespace std;
-
-int main() {
-	int n;
-	cin>>n;
-	int sum=0;
-	while(n){
-	    sum+=n;
-	    n--;
-	}
-	cout<<"Sum:"<<sum;
-	return 0;
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum+=i;
+        }
+        System.out.println(sum);
+    }
 }
 
 
 
 #### Greatest of three numbers
-#include <iostream>
-using namespace std;
-
-int main() {
-	int a,b,c;
-	cin>>a>>b>>c;
-	if(a>=b && a>=c){
-	    cout<<a<<" is the greatest";
-	}
-	else if(b>=c && b>=a){
-	    cout<<b<<" is the greatest";
-	}
-	else{
-	    cout<<c<<" is the greatest";
-	}
-	return 0;
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int b=s.nextInt();
+        int c=s.nextInt();
+        if(a>=b && a>=c){
+            System.out.println(a+" is greatest of three");
+        }
+        else if(b>=a && b>=c){
+            System.out.println(b+" is greatest of three");
+        }
+        else{
+            System.out.println(c+" is greatest of three");
+        }
+    }
 }
 
 
 #### Leap year or not
-#include <iostream>
-using namespace std;
-
-int main() {
-	int n;
-	cin>>n;
-	if(n%400==0){
-	    cout<<n<<" is leap year";
-	}
-	else if(n%4==0 && n%100!=0){
-	    cout<<n<<" is leap year";
-	}
-	else{
-	    cout<<n<<" is non leap year";
-	}
-	return 0;
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        if(n%400==0){
+            System.out.println("Leap year");
+        }
+        else if(n%4==0 && n%100!=0){
+            System.out.println("Leap year");
+        }
+        else{
+            System.out.println("Non leap year");
+        }
+    }
 }
-
 
  
 #### Check whether a number is prime number or not
-#include <iostream>
-using namespace std;
-
-int main() {
-	int n;
-	cin>>n;
-	bool flag=true;
-	for(int i=2;i<n;i++){
-	    if(n%i==0){
-	        flag=false;
-          break;
-	    }
-	}
-	if(flag){
-	    cout<<"Prime number";
-	}
-	else{
-	    cout<<"Not a prime number";
-	}
-	return 0;
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        boolean flag=true;
+        for(int i=2;i<n;i++){
+            if(n%i==0){
+                flag=false;
+                break;
+            }
+        }
+        if(flag){
+            System.out.println("Prime number");
+        }
+        else{
+            System.out.println("Not a Prime number");
+        }
+    }
 }
+
+
+
+
+#### Sum of digits of a number
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int sum=0;
+        while(n!=0){
+            int d=n%10;
+            sum+=d;
+            n/=10;
+        }
+        System.out.println("Sum of digits:"+sum);
+    }
+}
+
+
+
+
+#### Reverse a number
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int sum=0;
+        while(n!=0){
+            int d=n%10;
+            sum=sum*10+d;
+            n/=10;
+        }
+        System.out.println("Reversed number:"+sum);
+    }
+}
+
+
+
+
+#### Palindrome number
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int sum=0;
+        int m=n;
+        while(n!=0){
+            int d=n%10;
+            sum=sum*10+d;
+            n/=10;
+        }
+        if(sum==m){
+            System.out.println("Palindrome number");
+        }
+        else{
+            System.out.println("Not a Palindrome number");
+        }
+    }
+}
+
+
+
+
+#### Armstrong number
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int sum=0;
+        int c=0;
+        int m=n;
+        int l=n;
+        while(n!=0){
+            int r=n%10;
+            c++;
+            n/=10;
+        }
+        while(m!=0){
+            int d=m%10;
+            sum=sum+(int)Math.pow(d,c);
+            m/=10;
+        }
+        if(sum==l){
+            System.out.println("Armstrong number");
+        }
+        else{
+            System.out.println("Not an Armstrong number");
+        }
+    }
+}
+
+
+
+#### Fibonacci Series
+import java.io.*;
+import java.util.Scanner;
+class Code {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int a=0,b=1,c;
+        System.out.print(a+" "+b+" ");
+        
+        while(n>2){
+            c=a+b;
+            System.out.print(c+" ");
+            a=b;
+            b=c;
+            n--;
+        }
+        
+    }
+}
+
+
+
+
+#### 
