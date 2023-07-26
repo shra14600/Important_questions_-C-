@@ -298,4 +298,161 @@ class GFG {
 }
 
 
-#### 
+#### Prime factor of a number
+import java.io.*;
+import java.util.Scanner;
+
+class GFG {
+    public static int prime(int num){
+        
+		for(int j=2;j<num;j++){
+		    if(num%j==0){
+		        return 0;
+		    }
+	    }
+        return 1;
+    }
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int i=2;i<=n;i++){
+		    if(prime(i)==1){
+		        int a=n;
+		        while(a%i==0){
+		            System.out.println(i);
+		            a/=i;
+		        }
+		    }
+		}
+	}
+}
+
+
+
+#### Check whether a number is Strong number or not
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+    public static int fact(int num){
+        int f=1;
+        while(num!=0){
+            f*=num;
+            num--;
+        }
+        return f;
+    }
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int sum=0;
+		int m=n;
+		while(n!=0){
+		    int d=n%10;
+		    sum+=fact(d);
+		    n/=10;
+		}
+		if(sum==m){
+		    System.out.println("It is a strong number");
+		}
+		else{
+		    System.out.println("It is not a strong number");
+		}
+	}
+}
+
+
+
+
+#### Check whether a number is perfect number or not
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int sum=0;
+		for(int i=1;i<n;i++){
+		    if(n%i==0){
+		    sum+=i;
+		    }
+		}
+		if(sum==n){
+		    System.out.println("It is a perfect number");
+		}
+		else{
+		    System.out.println("It is not a perfect number");
+		}
+	}
+}
+
+
+
+#### Check whether a number is perfect square or not
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		if(Math.floor(Math.sqrt(n))==Math.ceil(Math.sqrt(n))){
+		    System.out.println("It is a perfect square");
+		}
+		else{
+		    System.out.println("It is not a perfect square");
+		}
+	}
+}
+
+
+
+#### Check whether a number is automorphic number or not
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+    public static int automorphic(int n){
+        int m=n*n;
+		while(n!=0){
+		    if(n%10!=m%10){
+		        return 0;
+		    }
+		    m/=10;
+		    n/=10;
+		}
+		return 1;
+    }
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		
+		if(automorphic(n)==1){
+		    System.out.println("Automorphic number");
+		}
+		else{
+		    System.out.println("Not an Automorphic number");
+		}
+	}
+}
+
+
+#### Harshad number
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+	    Scanner s=new Scanner(System.in);
+	    int n=s.nextInt();
+	    int m=n;
+	    int sum=0;
+	    while(n!=0){
+	        int d=n%10;
+	        sum+=d;
+	        n/=10;
+	    }
+	    if(m%sum==0){
+	        System.out.println("Harshad number");
+	    }
+	    else{
+	        System.out.println("Not a Harshad number");
+	    }
+	}
+}
