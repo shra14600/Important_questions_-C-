@@ -481,3 +481,34 @@ class GFG {
 		}
 	}
 }
+
+
+
+
+#### Friendly pair
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+    static int getSum(int num){
+        int sum=0;
+        for(int i=1;i<num/2;i++){
+		    if(num%i==0){
+		        sum+=i;
+		    }
+		}
+		return sum;
+    }
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int first=s.nextInt();
+		int second=s.nextInt();
+		int sum1=getSum(first),sum2=getSum(second);
+		
+		if(sum1/first==sum2/second){
+		    System.out.println("They are friendly pair");
+		}
+		else{
+		    System.out.println("They are not friendly pair");
+		}
+	}
+}
