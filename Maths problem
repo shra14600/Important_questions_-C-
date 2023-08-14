@@ -40,4 +40,26 @@ class GFG {
 
 
 
+#### Binary to Decimal
+import java.io.*;
+import java.util.Scanner;
+
+class GFG {
+	public static void main (String[] args) {
+          	Scanner s=new Scanner(System.in);
+          	int a=s.nextInt();
+          	int n=0;
+          	int sum=0;
+          	while(a>0){
+          	    int d=a%10;
+          	    sum+=d*Math.pow(2,n);
+          	    a/=10;
+          	    n++;
+          	}
+          	System.out.println(sum);
+	}
+}
+
+
+
 #### 
