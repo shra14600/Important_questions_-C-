@@ -62,4 +62,43 @@ class GFG {
 
 
 
-#### 
+#### Octal number to Decimal number
+import java.io.*;
+import java.util.Scanner;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int sum=0;
+		int i=0;
+		while(n>0){
+		    int d=n%10;
+		    sum+=d*Math.pow(8,i);
+		    n/=10;
+		    i++;
+		}
+		System.out.println(sum);
+	}
+}
+
+
+
+#### Hexadecimal number to decimal number
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		String n=s.nextLine();
+		String digit="0123456789ABCDEF";
+		n=n.toUpperCase();
+		int sum=0;
+		for(int i=0;i<n.length();i++){
+		    char ch=n.charAt(i);
+		    int d=digit.indexOf(ch);
+		    sum=16*sum+d;
+		}
+		System.out.println(sum);
+	}
+}
