@@ -124,3 +124,26 @@ class GFG {
 		}
 	}
 }
+
+
+
+
+#### Decimal to octal
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int[] arr=new int[30];
+		int i=0;
+		while(n>0){
+		    int d=n%8;
+		    arr[i++]=d;
+		    n/=8;
+		}
+		for(int j=0;j<i;j++){
+		    System.out.print(arr[i-j-1]);
+		}
+	}
+}
