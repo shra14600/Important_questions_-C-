@@ -147,3 +147,38 @@ class GFG {
 		}
 	}
 }
+
+
+
+
+#### decimal to hexadecimal
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		char[] hexa = new char[100];
+		int i = 0;
+        while (num != 0)
+        {
+            int rem=num % 16;
+            if(rem<10)
+            {
+                hexa[i]=(char)(rem + 48);
+                i++;
+            }                    
+            else
+            {
+                hexa[i]=(char)(rem + 55);
+                i++;
+            } 
+            num/=16;
+        }
+        for(int j=i-1;j>=0;j--){
+            System.out.print (hexa[j]);
+        }
+	}
+}
