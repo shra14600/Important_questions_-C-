@@ -182,3 +182,67 @@ class GFG {
         }
 	}
 }
+
+
+
+####Quadrants in which a given coordinate lies
+/*package whatever //do not write package name here */
+
+import java.util.Scanner;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int x=s.nextInt();
+		int y=s.nextInt();
+		if(x>0 && y>0){
+		    System.out.println("First quadrant");
+		}
+		else if(x<0 && y>0){
+		    System.out.println("Second quadrant");
+		}
+		else if(x<0 && y<0){
+		    System.out.println("Third quadrant");
+		}
+		else if(x>0 && y<0){
+		    System.out.println("Fourth quadrant");
+		}
+		else if(x==0 && y==0){
+		    System.out.println("Origin");
+		}
+		else if(x!=0 && y==0){
+		    System.out.println("X-axis");
+		}
+		else if(x==0 && y!=0){
+		    System.out.println("Y-axis");
+		}
+	}
+}
+
+
+
+####Permutation
+import java.util.Scanner;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int r=s.nextInt();
+		int p;
+		p=fact(n)/(fact(n-r));
+		System.out.println(p);
+	}
+	static int fact(int n){
+	    int f=1;
+	    while(n>0){
+	        f=f*n;
+	        n--;
+	    }
+	    return f;
+	}
+}
+
+
+
+####
