@@ -296,3 +296,53 @@ class GFG {
 		System.out.println(p/den+"/"+q/den);
 	}
 }
+
+
+
+###Replace 0's with 1
+import java.util.Scanner;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int k=1;
+		int replace=0;
+		while(n>0){
+		    int r=n%10;
+		    if(r==0) r=1;
+		    replace+=r*k;
+		    n/=10;
+		    k*=10;
+		}
+		System.out.println(replace);
+	}
+}
+
+
+
+###Prime number between range
+import java.util.Scanner;
+
+class GFG {
+    public static boolean isPrime(int n){
+        if(n<=1) return false;
+        for(int i=2;i<n/2;i++){
+            if(n%i==0){
+                return false;
+            } 
+        }
+         return true;
+        
+    }
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n1=s.nextInt();
+		int n2=s.nextInt();
+		for(int i=n1;i<=n2;i++){
+		    if(isPrime(i)){
+		        System.out.println(i);
+		    }
+		}
+	}
+}
