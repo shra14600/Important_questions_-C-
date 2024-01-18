@@ -346,3 +346,73 @@ class GFG {
 		}
 	}
 }
+
+
+
+###number of digit in a number
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int count=0;
+		while(n>0){
+		    int r=n%10;
+		    count++;
+		    n/=10;
+		}
+		System.out.println(count);
+	}
+}
+
+
+
+###number of days in a given month
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter a month");
+		int m=s.nextInt();
+		if(m==2){
+		    System.out.println("enter an year");
+		    int n=s.nextInt();
+    		if((n%400==0) ||(n%100!=0 && n%4==0)){
+    		    System.out.println("29 days");
+    		}
+		}
+		else if(m==1 || m==3 || m==5 || m==7 || m==8 || m==10 || m==12){
+		    System.out.println("31 days");
+		}
+		else if(m==4 || m==6 || m==9 || m==11){
+		    System.out.println("30 days");
+		}
+		else{
+		    System.out.println("invalid month");
+		}
+	}
+}
+
+
+
+
+###power of a number
+import java.io.*;
+import java.util.Scanner;
+class GFG {
+    public static int power(int n,int p){
+        if(p==0) return 1;
+        return n*power(n,p-1);
+    }
+	public static void main (String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int p=s.nextInt();
+		int res=power(n,p);
+		System.out.println(res);
+	}
+}
